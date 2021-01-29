@@ -9,24 +9,8 @@
     <div class="text-3xl py-4">{{ .Title }}</div>
     <div class="w-3/12 xl:w-2/12 border-b"></div>
 
-    <div class="flex items-center pt-4">
-      {{ with or (.Params.role) (.Params.organizations)}}
-        <i class="fas fa-user"></i>
-      {{ end }}
-      <div class="flex flex-wrap">
-        {{ with .Params.role }}
-          <span class="pl-4">{{ . }}</span>
-        {{ end }}
-
-        {{ with .Params.organization }}
-          <a href="{{ .url }}" class="pl-4">{{ .name }}</a>
-        {{ end }}
-      </div>
-
-    </div>
-
     {{ with .Params.bio }}
-      <div class="py-8 text-lg leading-normal">
+      <div class="py-4 text-lg leading-normal">
         {{ . }}
       </div>
     {{ end }}
